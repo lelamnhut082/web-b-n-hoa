@@ -1,0 +1,149 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #fcfcfc;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	/* Canh giữa trang */
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	min-height: 100vh;
+}
+
+.feedback-container {
+	max-width: 650px;
+	width: 100%;
+	background: white;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	margin: 50px auto;
+}
+
+h1 {
+	text-align: center;
+	color: #6da068; /* Màu xanh lá cây thương hiệu */
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.subtitle {
+	text-align: center;
+	color: #777;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 15px;
+}
+
+/* ---------------- FORM STYLING ---------------- */
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	box-sizing: border-box;
+	transition: border-color 0.3s;
+}
+
+.form-group textarea {
+	min-height: 150px;
+	resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+	border-color: #f7a9a8; /* Màu hồng nhạt khi focus */
+	outline: none;
+}
+
+/* Đánh giá Sao */
+.rating-group {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	border: 1px solid #eee;
+	padding: 10px;
+	border-radius: 6px;
+}
+
+.rating-group label {
+	font-weight: normal;
+	color: #333;
+	display: flex;
+	align-items: center;
+}
+
+.rating-group input[type="radio"] {
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.star-rating {
+	color: gold;
+	font-size: 1.2em;
+	margin-left: 3px;
+}
+
+/* Nút Submit */
+.btn-submit {
+	width: 100%;
+	background-color: #f7a9a8; /* Màu hồng thương hiệu */
+	color: white;
+	padding: 15px 30px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+	transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+	background-color: #e9596c;
+}
+
+
+/* Áp dụng Flexbox cho CONTAINER CHUNG (.rating-group) */
+.rating-group {
+    display: flex;
+    align-items: center; /* Căn chỉnh các items theo chiều dọc */
+    justify-content: space-around; /* Căn đều khoảng cách giữa các lựa chọn */
+    gap: 10px; /* Khoảng cách tối thiểu giữa các nhóm */
+    
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 6px;
+    flex-wrap: wrap; /* Quan trọng cho responsive */
+}
+
+/* Áp dụng Flexbox cho MỖI LỰA CHỌN CON (.rating-option) */
+/* Điều này giúp input và label trong mỗi nhóm thẳng hàng với nhau */
+.rating-group .rating-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Căn chỉnh cụ thể cho label */
+.rating-group label {
+    display: flex;
+    align-items: center; /* Căn chỉnh số và sao thẳng hàng */
+    font-weight: normal;
+}
